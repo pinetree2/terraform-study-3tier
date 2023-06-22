@@ -30,8 +30,8 @@ resource "aws_subnet" "public_subnet"{
 
 #private subnet - natgw 연결 
 resource "aws_subnet" "private_subnet"{
-  count = 6
-  vpc_id = aws.vpc.vpc.id
+  count = 4
+  vpc_id = aws_vpc.vpc.id
   cidr_block = var.private_subnet_cidr[count.index]
   availability_zone = var.available_azs[count.index % length(var.available_azs)]
   tags = {
@@ -56,7 +56,7 @@ resource "aws_route_table_association" "route_table_association-1"{
 
 //nat gw 를 위한 EIP 발급
 resource "aws_eip" "nat-eip"{
-  vpc = true 
+  domain = "vpc"
   lifecycle{
     create_before_destroy = true
   }

@@ -1,5 +1,6 @@
 .terraform/
-song-key.pem
+song-key
+song-key.pub
 .terraform/
 *.tfstate
 *.tfstate.backup

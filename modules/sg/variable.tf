@@ -57,3 +57,8 @@ variable "source_was_cidrs" {
     } 
   ]
 }
+
+
+variable "vpc_id"{
+  type = string
+}
