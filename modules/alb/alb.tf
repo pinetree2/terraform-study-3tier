@@ -6,7 +6,7 @@ resource "aws_lb" "external-alb"{
     load_balancer_type = "application"
     security_groups = [var.security_group_id]
     subnets = [var.private_subnet_id[0],var.private_subnet_id[1]]
-    enable_deletion_protection = true
+    #enable_deletion_protection = true
     tags = {Name = "song-lb"}
 
 

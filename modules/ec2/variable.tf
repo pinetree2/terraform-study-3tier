@@ -6,12 +6,12 @@ variable "instance_type" {
 }
 variable "key_name" {
     type = string
-    default = "song-key.pem"
+    default = "song1-key.pem"
 
 }
 variable "ami"{
     type = string 
-    default = "	ami-091a822378848a5bf"
+    default = "ami-091a822378848a5bf"
 }
 
 variable "sg_id"{
