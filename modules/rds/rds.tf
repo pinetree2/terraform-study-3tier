@@ -34,8 +34,6 @@ resource "aws_db_instance" "rds_master" {
   engine_version         = "8.0.32"
   instance_class         = "db.t2.micro"
   multi_az               = true
-  //availability_zone = local.master_az
-  //subnet_ids = [aws_subnet.db_subnet[0].id]
   identifier             = "master-db"
   username               = "root"
   password               = "12345678"
@@ -53,8 +51,6 @@ resource "aws_db_instance" "rds_slave" {
   engine_version         = "8.0.32"
   instance_class         = "db.t2.micro"
   multi_az               = true
-  //availability_zone = local.slave_az
-  //subnet_ids = [aws_subnet.db_subnet[0].id]
   identifier             = "slave-db"
   username               = "root"
   password               = "12345678"
